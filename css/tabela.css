@@ -1,0 +1,89 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+/*** HEADER ***/
+table thead {
+  border-bottom: 2px solid #e5e5e5;
+}
+
+table th,
+table td {
+  padding: 1em 0.5em;
+  position: relative;
+  color: white;
+}
+
+table th {
+  letter-spacing: 0.025em;
+  outline: none;
+  padding-right: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+
+/*** BODY ***/
+table tbody > tr {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  color: white !important;
+  text-align: center;
+}
+
+table tbody > tr:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 1);
+  color: #fff;
+}
+
+/************************************************/
+/***************** MEDIA QUERIES ****************/
+/************************************************/
+@media (max-width: 50em) {
+
+  /*** TABLE ***/
+  table tr,
+  table td {
+    display: block;
+  }
+
+  table tr {
+    padding: 0.75em 0;
+  }
+
+  /* Header */
+  table thead tr {
+    text-align: center;
+  }
+
+  table th {
+    display: block;
+    padding: 0.25em 0.5em;
+  }
+
+  /* Body */
+  table td {
+    padding: 0.25em 0.5em 0.25em 6.5em;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    left: 0.5em;
+    position: absolute;
+    top: 0.125em;
+    width: 100%;
+  }
+}
+
+.win {
+    background: green;
+    color: white;
+}
+  
+.loss {
+    background: #ff00005c;
+    color: white;
+}
